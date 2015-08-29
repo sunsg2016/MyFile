@@ -30,6 +30,34 @@ git log --pretty=oneline 可以看些简单的log
 git reflog 查看所有提交的log 包括回退的分支
 
 
+git 回退版本
+
+git reset --hard HEAD^  回退到上个版本
+
+git reset --hard HEAD^^ 回退到上上个版本 
+
+git reset --hard HEAD ~100 回退到前100个提交
+
+git reset --hard 3628164 回退到某个分支 "3628164" 提交的分支序列号的前几位
+                         取几位能和其他分支区分开来就行 保持唯一性，当然全部序列号也行
+
+恢复文件
+
+git checkout -- file 恢复到添加到工作区之前的文件
+
+git reset HEAD file 恢复到添加到暂存区的之前的文件
+
+
+删除文件
+
+rm test  删除test文件 删除工作区文件
+
+git rm test 确认删除test文件 删除版本库文件
+git checkout -- test 恢复工作区删除的文件 把版本库中的文件替换工作去的文件
+
+git rm test 确认删除test文件 删除版本库文件
+git commit －m "remo test" 提交之后版本库中的文件就彻底没了 test文件也就恢复不过来了
+
 
 
 
