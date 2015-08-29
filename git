@@ -1,0 +1,35 @@
+git 命令
+创建仓库和一次提交
+
+1.git init 初始化 创建git仓库
+
+2.git config user.name "someone" 配置本文件用户名
+
+3.git config user.email "someone@someplace.com" 配置本文件邮箱
+
+4.git add * 添加所有改变的内容
+
+5.git commit -m "some init msg" 一次提交
+
+查看配置 和 设置配置
+
+git config --list
+
+全局设置用户名和邮箱
+
+git config --global user.name "someone” 全局设置用户名
+
+git config --global user.email johndoe@example.com 全局设置邮箱
+
+查看log
+
+git log 普通查看log 
+
+git log --pretty=oneline 可以看些简单的log
+
+git reflog 查看所有提交的log 包括回退的分支
+
+
+
+
+
